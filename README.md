@@ -1,41 +1,40 @@
-# handwritten-digits-recognizer
-A simple neural network in python capable of recognizing handwritten digits
+# Handwritten Digits Recognizer
+A simple Python neural network capable of recognizing handwritten digits using the MNIST dataset.
 
-------------------------------------------------------------------------------------------------------
+This project was built from scratch (no deep-learning frameworks) to better understand how neural networks and backpropagation work under the hood.
 
-This netwotk uses the MNIST dataset to learn.
-The database consists of 60,000 grayscale images of handwritten digits from 0 to 9, 28x28 pixels each.
+## MNIST Dataset
+60,000 grayscale images of handwritten digits from 0 to 9, 28x28 pixels each. [1]
 
 ![080b85fa-6251-42d9-b069-a96ac276eefe](https://user-images.githubusercontent.com/102973750/222712150-c58040a2-09ea-4e40-ba55-79df1cc62687.png)
 
-Link: http://yann.lecun.com/exdb/mnist/
+## Neural Network Architecture
 
-------------------------------------------------------------------------------------------------------
+The default neural network structure is:
+- Input layer:
+  - 784 neurons (one per pixel)
+- Hidden layers:
+  - 128 neurons
+  - 30 neurons
+- Output layer:
+  - 10 neurons (one per digit)
 
-mnist_loader.py: Convert the mnist compressed files to numpy arrays and randomize the data.
+The network is trained using the backpropagation algorithm, which updates weights and biases via gradient descent.
 
-neural_network.py: The network. Its default format is: 
-- 784 neurons for the input layer (one neuron per pixel)
-- 2 hidden layers: one with 128 neurons and other with 30
-- 10 neurons for the output layer (one neuron per digit)
+## Files
 
-To learn, the it uses the backpropagation algorithm to update the weights and biases.
+`mnist_loader.py` loads the MNIST files, converts the data into NumPy arrays, and shuffles the dataset.
 
-train_network.py: Trains the network using the MNIST dataset.
+`neural_network.py` implements the neural network.
+
+`train_network.py` trains the network and saves the model to `network_data/`.
 > python3 train_network.py
 
-app.py: Creates a canvas to test the AI. The network will try to predict the user's drawing in real time.
+`app.py` creates a graphical drawing canvas that allows the user to draw a digit to the network analyze in real time.
 > python3 app.py
 
-There's a folder named "network_data" where the network information (name, weights, biases, accuracy) is saved.
+## References
 
-------------------------------------------------------------------------------------------------------
+[1] http://yann.lecun.com/exdb/mnist/
 
-REFERENCES:
-- http://neuralnetworksanddeeplearning.com/chap1.html
-- http://yann.lecun.com/exdb/mnist/
-
-------------------------------------------------------------------------------------------------------
-
-This project was made for academic purposes.
-Feel free to use it.
+[2] http://neuralnetworksanddeeplearning.com/chap1.html
