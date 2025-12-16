@@ -3,6 +3,8 @@ A simple Python neural network capable of recognizing handwritten digits using t
 
 This project was built from scratch (no deep-learning frameworks) to better understand how neural networks and backpropagation work under the hood.
 
+![](./resources/program_execution.gif)
+
 ## MNIST Dataset
 60,000 grayscale images of handwritten digits from 0 to 9, 28x28 pixels each. [1]
 
