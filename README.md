@@ -1,5 +1,5 @@
 # Handwritten Digits Recognizer
-A simple Python neural network capable of recognizing handwritten digits using the MNIST dataset.
+A elementary Python neural network capable of recognizing handwritten digits using the MNIST dataset.
 
 This project was built from scratch (no deep-learning frameworks) to better understand how neural networks and backpropagation work under the hood.
 
