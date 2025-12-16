@@ -110,12 +110,12 @@ class Network(object):
 
     def save(self):
         print("Saving...")
-        np.save(f'../network_data/{self.name}.npy', np.array([self.weights, self.biases, [self.accuracy], [self.name]], dtype=object))
+        np.save(f'network_data/{self.name}.npy', np.array([self.weights, self.biases, [self.accuracy], [self.name]], dtype=object))
         print("Done!\n")
 
     def load(self, filename):
         print("Loading...")
-        content = np.load(f'../network_data/{filename}.npy', allow_pickle=True)
+        content = np.load(f'network_data/{filename}.npy', allow_pickle=True)
         self.weights = content[0]
         self.biases = content[1]
         self.num_layers = len(self.biases) + 1
