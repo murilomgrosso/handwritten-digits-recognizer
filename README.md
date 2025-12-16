@@ -23,17 +23,12 @@ The default neural network structure is:
 
 The network is trained using the backpropagation algorithm, which updates weights and biases via gradient descent.
 
-## Files
+## How to run
+> python3 scr/app.py
 
-`mnist_loader.py` loads the MNIST files, converts the data into NumPy arrays, and shuffles the dataset.
+Make sure to have all requirements beforehand.
 
-`neural_network.py` implements the neural network.
-
-`train_network.py` trains the network and saves the model to `network_data/`.
-> python3 train_network.py
-
-`app.py` creates a graphical drawing canvas that allows the user to draw a digit to the network analyze in real time.
-> python3 app.py
+> pip install requiremets.txt
 
 ## References
 
